@@ -29,6 +29,48 @@
               </vue-particles>
           <router-view></router-view>
         </div>
+        <br>
+        <div class="mi">
+          <!-- <v-parallax height="500" src="https://i.ytimg.com/vi/8QMWkAn35LQ/maxresdefault.jpg"></v-parallax> -->
+        </div>
+
+        <v-container fluid="fluid">
+          <v-row>
+            <v-col xs6>
+              <v-card class="secondary">
+                <v-card-text>
+                  <v-parallax height="500" src="https://i.ytimg.com/vi/8QMWkAn35LQ/maxresdefault.jpg"></v-parallax>
+                </v-card-text>
+              </v-card>
+            </v-col>
+            <v-col xs6>
+              <v-card class="secondary">
+                <v-card-text>
+                  <h2>stuff here</h2>
+                </v-card-text>
+              </v-card>
+            </v-col>
+          </v-row>
+        </v-container>
+        <v-container fluid="fluid">
+          <v-row>
+            <v-col xs6>
+              <v-card class="secondary">
+                <v-card-text>
+                  <h1>other stuff here!</h1>
+                </v-card-text>
+              </v-card>
+            </v-col>
+            <v-col xs6>
+              <v-card class="secondary">
+                <v-card-text>
+                  <v-parallax height="500" src="https://i.ytimg.com/vi/8QMWkAn35LQ/maxresdefault.jpg"></v-parallax>
+                </v-card-text>
+              </v-card>
+            </v-col>
+          </v-row>
+        </v-container>
+
       </div>
 </template>
 
