@@ -49,6 +49,7 @@
     "shelljs": "^0.7.6",
     "url-loader": "^0.5.8",
     "vue-loader": "^11.3.4",
+    "vue-particles": "^1.0.2",
     "vue-style-loader": "^2.0.5",
     "vue-template-compiler": "^2.2.6",
     "vuetify": "^0.11.1",
