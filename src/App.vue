@@ -1,13 +1,20 @@
 <template>
       <div id="app">
           <div class="wrap-banner">
+            <v-toolbar class="grey darken-3" id="nav">
+              <v-toolbar-title id="links">
+                <p class="space"> Home</p>
+                <p class="space"> Contact</p>
+                <p class="space"> Gallery</p>
+              </v-toolbar-title>
+            </v-toolbar>
               <div class="main-title">
-                <h2>
+                <h1>
                   ASHLEE
-                </h2>
-                <p class="subtitle">
+                </h1>
+                <h3 class="subtitle">
 
-                </p>
+                </h3>
               </div>
               <vue-particles
                 color="#ffffff"
@@ -27,50 +34,58 @@
                 clickMode="push"
               >
               </vue-particles>
-          <router-view></router-view>
         </div>
+        <!-- <router-view></router-view> -->
         <br>
-        <div class="mi">
-          <!-- <v-parallax height="500" src="https://i.ytimg.com/vi/8QMWkAn35LQ/maxresdefault.jpg"></v-parallax> -->
-        </div>
-
         <v-container fluid="fluid">
           <v-row>
-            <v-col xs6>
-              <v-card class="secondary">
+            <v-col xs12>
+              <v-card class="secondary red lighten-3">
                 <v-card-text>
-                  <v-parallax height="500" src="https://i.ytimg.com/vi/8QMWkAn35LQ/maxresdefault.jpg"></v-parallax>
-                </v-card-text>
-              </v-card>
-            </v-col>
-            <v-col xs6>
-              <v-card class="secondary">
-                <v-card-text>
-                  <h2>stuff here</h2>
+                  <h3>Actress | Boss</h3>
                 </v-card-text>
               </v-card>
             </v-col>
           </v-row>
         </v-container>
+        <br>
         <v-container fluid="fluid">
           <v-row>
-            <v-col xs6>
-              <v-card class="secondary">
+            <v-col xs12 md6>
+              <v-card class="secondary red lighten-4">
                 <v-card-text>
-                  <h1>other stuff here!</h1>
+                  <v-parallax height="500" src="https://baconmockup.com/300/800"></v-parallax>
                 </v-card-text>
               </v-card>
             </v-col>
-            <v-col xs6>
-              <v-card class="secondary">
+            <v-col xs12 md6>
+              <v-card class="secondary red lighten-3">
                 <v-card-text>
-                  <v-parallax height="500" src="https://i.ytimg.com/vi/8QMWkAn35LQ/maxresdefault.jpg"></v-parallax>
+                  <h3>stuff here</h3>
                 </v-card-text>
               </v-card>
             </v-col>
           </v-row>
         </v-container>
-
+        <br>
+        <v-container fluid="fluid">
+          <v-row>
+            <v-col xs12 md6>
+              <v-card class="secondary red lighten-3">
+                <v-card-text>
+                  <h3>other stuff here!</h3>
+                </v-card-text>
+              </v-card>
+            </v-col>
+            <v-col xs12 md6>
+              <v-card class="secondary red lighten-4">
+                <v-card-text>
+                  <v-parallax height="500" src="https://baconmockup.com/300/700"></v-parallax>
+                </v-card-text>
+              </v-card>
+            </v-col>
+          </v-row>
+        </v-container>
       </div>
 </template>
 
@@ -81,8 +96,21 @@ export default {
 </script>
 
 <style scoped>
+ #nav {
+  position: fixed;
+  top: 0;
+}
+#links{
+  display: flex;
+  flex-direction: row;
+  padding: 1em;
+}
+.space {
+  padding: 1em;
+}
 *, :after, :before {
   box-sizing: border-box;
+  font-family: 'Permanent Marker', cursive;
 }
 html, body {
   height: 100%;
@@ -142,6 +170,8 @@ a {
 h3 {
   font-weight: 100;
   font-size: 2rem;
+  color: white;
+  font-size: 5em;
 }
 .white {
   color: #ffffff;
@@ -156,7 +186,8 @@ h3 {
   text-align: center;
 }
 #particles-js {
-  background-image: url("./assets/ash.jpg");
+  /*background-image: url("./assets/ash.jpg");*/
+  background-image: url("https://baconmockup.com/1000/1000");
   background-size: cover;
   position: absolute;
   top: 0;
