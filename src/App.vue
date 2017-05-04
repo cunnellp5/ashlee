@@ -3,19 +3,15 @@
           <div class="wrap-banner">
             <v-toolbar class="grey darken-3" id="nav">
               <v-toolbar-title id="links">
-                <p class="space"> Home</p>
-                <p class="space"> Contact</p>
-                <p class="space"> Gallery</p>
+                <router-link to='/'><p class="space">Home</p></router-link>
+                <router-link to='contact'><p class="space">Contact</p></router-link>
+                <router-link to='gallery'><p class="space">Gallery</p></router-link>
               </v-toolbar-title>
             </v-toolbar>
-              <div class="main-title">
-                <h1>
-                  ASHLEE
-                </h1>
-                <h3 class="subtitle">
+            <div class="main-title">
 
-                </h3>
-              </div>
+            <router-view></router-view>
+            </div>
               <vue-particles
                 color="#ffffff"
                 :particleOpacity="0.7"
@@ -35,7 +31,6 @@
               >
               </vue-particles>
         </div>
-        <!-- <router-view></router-view> -->
         <br>
         <v-container fluid="fluid">
           <v-row>

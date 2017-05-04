@@ -9,6 +9,11 @@ Vue.use(Router);
 export default new Router({
   routes: [
     {
+      path: '/',
+      name: 'Hello',
+      component: Hello,
+    },
+    {
       path: '/contact',
       name: 'contact',
       component: contact,
@@ -17,11 +22,6 @@ export default new Router({
       path: '/gallery',
       name: 'gallery',
       component: gallery,
-    },
-    {
-      path: '/',
-      name: 'Hello',
-      component: Hello,
     },
   ],
 });
