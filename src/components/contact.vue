@@ -55,18 +55,7 @@
             ></v-text-field>
           </v-col>
         </v-row>
-        <!-- <v-row row>
-          <v-col xs4>
-            <v-subheader class="grey--text text--lighten-1">Message</v-subheader>
-          </v-col>
-          <v-col xs8>
-            <v-text-field
-              name="input-3"
-              label="Text"
-              dark
-            ></v-text-field>
-          </v-col>
-        </v-row> -->
+
         <v-btn flat dark class="btn--dark-flat-pressed grey darken-1">Send</v-btn>
       </v-container>
     </v-card-text>

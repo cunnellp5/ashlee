@@ -53,10 +53,11 @@
                 </v-card-text>
               </v-card>
             </v-col>
-            <v-col xs12 md6>
+            <v-col class="text" xs12 md6>
               <v-card class="secondary red lighten-3">
                 <v-card-text>
-                  <h3>stuff here</h3>
+                  <h3>About:</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                 </v-card-text>
               </v-card>
             </v-col>
@@ -65,10 +66,11 @@
         <br>
         <v-container fluid="fluid">
           <v-row>
-            <v-col xs12 md6>
+            <v-col class="text" xs12 md6>
               <v-card class="secondary red lighten-3">
                 <v-card-text>
-                  <h3>other stuff here!</h3>
+                  <h3>Interests:</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                 </v-card-text>
               </v-card>
             </v-col>
@@ -91,6 +93,11 @@ export default {
 </script>
 
 <style scoped>
+.text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
  #nav {
   position: fixed;
   top: 0;
@@ -125,6 +132,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  background-color: #DBDBDB;
 }
 code[class*="language-"],
 pre[class*="language-"],
@@ -206,6 +214,7 @@ h3 {
   display: flex;
   height: 100vh;
   justify-content: center;
+  overflow: hidden;
 }
 .main-section {
   max-width: 650px;
