@@ -1,7 +1,7 @@
 <template>
       <div id="app">
           <div class="wrap-banner">
-            <v-toolbar class="grey darken-3" id="nav">
+            <v-toolbar class="transparent" id="nav">
               <v-toolbar-title id="links">
                 <router-link to='/'><p class="space">Home</p></router-link>
                 <router-link to='contact'><p class="space">Contact</p></router-link>
@@ -49,7 +49,7 @@
             <v-col xs12 md6>
               <v-card class="secondary red lighten-4">
                 <v-card-text>
-                  <v-parallax height="500" src="https://baconmockup.com/300/800"></v-parallax>
+                  <v-parallax height="500" src="http://lorempixel.com/300/800/nature"></v-parallax>
                 </v-card-text>
               </v-card>
             </v-col>
@@ -75,7 +75,7 @@
             <v-col xs12 md6>
               <v-card class="secondary red lighten-4">
                 <v-card-text>
-                  <v-parallax height="500" src="https://baconmockup.com/300/700"></v-parallax>
+                  <v-parallax height="500" src="http://lorempixel.com/300/700/nature"></v-parallax>
                 </v-card-text>
               </v-card>
             </v-col>
@@ -94,14 +94,18 @@ export default {
  #nav {
   position: fixed;
   top: 0;
+  box-shadow: none;
 }
 #links{
   display: flex;
   flex-direction: row;
-  padding: 1em;
 }
 .space {
   padding: 1em;
+  box-shadow: 0px 5px 3px #EF9A9A;
+  border-radius: 50%;
+  color: #EF9A9A;
+  text-decoration: underline;
 }
 *, :after, :before {
   box-sizing: border-box;
@@ -182,7 +186,7 @@ h3 {
 }
 #particles-js {
   /*background-image: url("./assets/ash.jpg");*/
-  background-image: url("https://baconmockup.com/1000/1000");
+  background-image: url("http://lorempixel.com/g/1000/1000/");
   background-size: cover;
   position: absolute;
   top: 0;
