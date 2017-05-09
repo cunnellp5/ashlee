@@ -10,7 +10,8 @@
             </v-toolbar>
             <div class="main-title">
 
-            <transition name="slide" mode="out-in">
+            <!-- <transition name="slide" mode="out-in"> -->
+            <transition name="slide-fade" mode="out-in">
               <router-view></router-view>
             </transition>
 
@@ -251,7 +252,7 @@ h3 {
 .footer {
   margin: 1rem 0;
 }
-
+/*
   .slide-leave-active {
     transition: opacity 0.5s ease;
     opacity: 0;
@@ -279,5 +280,18 @@ h3 {
     100% {
       transform: translateY(0);
     }
+  }*/
+  /* Enter and leave animations can use different */
+  /* durations and timing functions.              */
+  .slide-fade-enter-active {
+    transition: all 1.5s ease;
+  }
+  .slide-fade-leave-active {
+    transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+  }
+  .slide-fade-enter, .slide-fade-leave-to
+  /* .slide-fade-leave-active for <2.1.8 */ {
+    transform: translateX(10px);
+    opacity: 0;
   }
 </style>
