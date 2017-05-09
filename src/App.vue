@@ -10,7 +10,10 @@
             </v-toolbar>
             <div class="main-title">
 
-            <router-view></router-view>
+            <transition name="slide" mode="out-in">
+              <router-view></router-view>
+            </transition>
+
             </div>
               <vue-particles
                 color="#ffffff"
@@ -132,7 +135,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  background-color: #DBDBDB;
+  background-color: #fff4f6;
 }
 code[class*="language-"],
 pre[class*="language-"],
@@ -249,6 +252,32 @@ h3 {
   margin: 1rem 0;
 }
 
-
-
+  .slide-leave-active {
+    transition: opacity 0.5s ease;
+    opacity: 0;
+    animation: slide-out 0.5s ease-out forwards;
+  }
+  .slide-leave {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  .slide-enter-active {
+    animation: slide-in 0.5s ease-out forwards;
+  }
+  @keyframes slide-out {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-30px);
+    }
+  }
+  @keyframes slide-in {
+    0%  {
+      transform: translateY(-30px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
 </style>
