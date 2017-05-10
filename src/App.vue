@@ -9,12 +9,10 @@
               </v-toolbar-title>
             </v-toolbar>
             <div class="main-title">
-
             <!-- <transition name="slide" mode="out-in"> -->
             <transition name="slide-fade" mode="out-in">
               <router-view></router-view>
             </transition>
-
             </div>
               <vue-particles
                 color="#ffffff"

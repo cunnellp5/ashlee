@@ -30,4 +30,5 @@ export default new Router({
       component: thankyou,
     },
   ],
+  mode: 'history',
 });

@@ -1,9 +1,11 @@
 <template lang="html">
   <div>
     <div class="main-title">
-      <h2 id="thanks">
-        Thank you, message sent!
-      </h2>
+      <div class="workme">
+        <h2 id="thanks">
+          Thank you, message sent!
+        </h2>
+      </div>
     </div>
   </div>
 </template>
@@ -18,7 +20,7 @@ h1, h2 {
   font-weight: normal;
   display: block;
   color: white;
-  font-size: 10em;
+  font-size: 5em;
   text-shadow: 8px 8px black;
 }
 #thanks {
@@ -35,5 +37,9 @@ h1, h2 {
   color: white;
   font-size: 10em;
   /*text-shadow: 8px 8px black;*/
+}
+.workme {
+  height: 80vh;
+  width: 90vw;
 }
 </style>
