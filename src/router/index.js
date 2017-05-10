@@ -3,6 +3,7 @@ import Router from 'vue-router';
 import contact from '@/components/contact';
 import gallery from '@/components/gallery';
 import Hello from '@/components/Hello';
+import thankyou from '@/components/thankyou';
 
 Vue.use(Router);
 
@@ -22,6 +23,11 @@ export default new Router({
       path: '/gallery',
       name: 'gallery',
       component: gallery,
+    },
+    {
+      path: '/thankyou',
+      name: 'thankyou',
+      component: thankyou,
     },
   ],
 });

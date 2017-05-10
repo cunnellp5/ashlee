@@ -252,42 +252,12 @@ h3 {
 .footer {
   margin: 1rem 0;
 }
-/*
-  .slide-leave-active {
-    transition: opacity 0.5s ease;
-    opacity: 0;
-    animation: slide-out 0.5s ease-out forwards;
-  }
-  .slide-leave {
-    opacity: 1;
-    transform: translateX(0);
-  }
-  .slide-enter-active {
-    animation: slide-in 0.5s ease-out forwards;
-  }
-  @keyframes slide-out {
-    0% {
-      transform: translateY(0);
-    }
-    100% {
-      transform: translateY(-30px);
-    }
-  }
-  @keyframes slide-in {
-    0%  {
-      transform: translateY(-30px);
-    }
-    100% {
-      transform: translateY(0);
-    }
-  }*/
-  /* Enter and leave animations can use different */
-  /* durations and timing functions.              */
+
   .slide-fade-enter-active {
-    transition: all 1.5s ease;
+    transition: all .5s ease;
   }
   .slide-fade-leave-active {
-    transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+    transition: all .5s cubic-bezier(1.0, 0.5, 0.8, 1.0);
   }
   .slide-fade-enter, .slide-fade-leave-to
   /* .slide-fade-leave-active for <2.1.8 */ {
