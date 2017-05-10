@@ -14,6 +14,7 @@
               </v-col>
               <v-col xs8>
                 <v-text-field
+                  v-model="name"
                   class="focused"
                   name="Name:"
                   label="Your name"
@@ -27,6 +28,7 @@
               </v-col>
               <v-col xs8>
                 <v-text-field
+                  v-model="email"
                   name="Email:"
                   label="Your email"
                   dark
@@ -39,6 +41,7 @@
               </v-col>
               <v-col xs8>
                 <v-text-field
+                  v-model="subject"
                   name="Subject"
                   label="Subject heading"
                   dark
@@ -51,6 +54,7 @@
               </v-col>
               <v-col xs8>
                 <v-text-field
+                  v-model="message"
                   name="Message:"
                   label="Message"
                   value=""
@@ -60,7 +64,9 @@
               </v-col>
             </v-row>
             <router-link to='thankyou'>
-              <v-btn type="submit" flat dark class="btn--dark-flat-pressed grey darken-1">Send</v-btn>
+              <transition name="slide-fade" mode="out-in">
+                <v-btn v-show="name && email && subject && message" type="submit" flat dark class="btn--dark-flat-pressed grey darken-1">Send</v-btn>
+              </transition>
             </router-link>
         </form>
       </v-container>
@@ -71,11 +77,30 @@
 
 <script>
 export default {
+  data() {
+    return {
+      name: '',
+      email: '',
+      subject: '',
+      message: '',
+    };
+  },
 };
 </script>
 
 <style lang="css" scoped>
   h3 {
     color: white;
+  }
+  .slide-fade-enter-active {
+    transition: all .8s ease;
+  }
+  .slide-fade-leave-active {
+    transition: all .5s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+  }
+  .slide-fade-enter, .slide-fade-leave-to
+  /* .slide-fade-leave-active for <2.1.8 */ {
+    transform: translateX(10px);
+    opacity: 0;
   }
 </style>
