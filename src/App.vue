@@ -247,9 +247,6 @@ h3 {
 .section-title {
   margin: 2rem 0 0 0;
 }
-.footer {
-  margin: 1rem 0;
-}
 
   .slide-fade-enter-active {
     transition: all .5s ease;

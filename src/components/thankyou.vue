@@ -38,8 +38,8 @@ h1, h2 {
   font-size: 10em;
   /*text-shadow: 8px 8px black;*/
 }
-.workme {
+/*.workme {
   height: 80vh;
   width: 90vw;
-}
+}*/
 </style>

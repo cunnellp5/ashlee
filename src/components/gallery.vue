@@ -2,9 +2,9 @@
   <div class="">
     <div class="workme">
       <h1>Gallery</h1>
+      <!-- <h1 v-if="loadIt">Loading...</h1> -->
       <ul>
-        <li
-          >
+        <li>
           <img class="" src="http://lorempixel.com/200/200/nature" alt="Nature">
         </li>
       </ul>
@@ -13,9 +13,24 @@
 </template>
 
 <script>
+import axios from 'axios';
+
 export default {
-  data: {
-    // imgs: [],
+  data() {
+    return {
+      // loadIt: false,
+    };
+  },
+  computed: {
+    mounted() {
+      this.loadIt = true;
+      console.log(this.loadIt);
+      axios.get('http://localhost:3000/pub/1/gallery')
+        .then((response) => {
+          console.log(response.data);
+          console.log('hi');
+        });
+    },
   },
 };
 </script>

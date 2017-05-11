@@ -1,11 +1,10 @@
 <template lang="html">
   <div>
-  <h3>Contact me</h3>
-  <v-card class="secondary elevation-0">
+  <h1 v-if="loadIt">Loading...</h1>
+  <h3 v-if="!loadIt">Contact me</h3>
+  <v-card v-if="!loadIt" class="secondary elevation-0">
     <v-card-text>
       <v-container fluid>
-
-
         <form role="form">
           <!-- action="https://getsimpleform.com/messages?form_api_token=1166124d2acf44f12b596ae3be187626" method="post" -->
           <!-- the redirect_to is optional, the form will redirect to the referrer on submission -->
@@ -99,17 +98,21 @@ export default {
         subject: '',
         message: '',
       },
+      loadIt: false,
     };
   },
   methods: {
     sendEmail() {
       if (this.emailData.name !== '' && this.emailData.email !== '' && this.emailData.subject !== '' && this.emailData.message !== '') {
-        axios.post('https://getsimpleform.com/messages?form_api_token=1166124d2acf44f12b596ae3be187626', this.emailData)
+        this.loadIt = true;
+        axios.post('https://cors-anywhere.herokuapp.com/https://getsimpleform.com/messages?form_api_token=1166124d2acf44f12b596ae3be187626', this.emailData)
         .then((response) => {
           this.emailData = response.data;
           event.preventDefault();
+        }).catch((error) => {
+          this.$router.replace({ name: 'thankyou' });
+          console.log(error.status);
         });
-        this.$router.replace({ name: 'thankyou' });
       }
     },
   },
