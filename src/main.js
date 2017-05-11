@@ -3,8 +3,8 @@
 import Vue from 'vue';
 import Vuetify from 'vuetify';
 import VueParticles from 'vue-particles';
-import axios from 'axios';
 import 'vuetify/dist/vuetify.min.css';
+import axios from 'axios';
 import App from './App';
 import router from './router';
 

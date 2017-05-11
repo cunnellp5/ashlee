@@ -2,24 +2,21 @@
   <div class="">
     <div class="workme">
       <h1>Gallery</h1>
-      <img class="" src="http://lorempixel.com/200/200/nature" alt="">
-      <img src="http://lorempixel.com/200/200/nature" alt="">
-      <img src="http://lorempixel.com/200/200/nature" alt="">
-      <img src="http://lorempixel.com/200/200/nature" alt="">
-      <img src="http://lorempixel.com/200/200/nature" alt="">
-      <img src="http://lorempixel.com/200/200/nature" alt="">
-      <img src="http://lorempixel.com/200/200/nature" alt="">
-      <img src="http://lorempixel.com/200/200/nature" alt="">
-      <img src="http://lorempixel.com/200/200/nature" alt="">
-      <img src="http://lorempixel.com/200/200/nature" alt="">
-      <img src="http://lorempixel.com/200/200/nature" alt="">
-      <img src="http://lorempixel.com/200/200/nature" alt="">
+      <ul>
+        <li
+          >
+          <img class="" src="http://lorempixel.com/200/200/nature" alt="Nature">
+        </li>
+      </ul>
     </div>
   </div>
 </template>
 
 <script>
 export default {
+  data: {
+    // imgs: [],
+  },
 };
 </script>
 

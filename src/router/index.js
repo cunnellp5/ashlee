@@ -29,6 +29,10 @@ export default new Router({
       name: 'thankyou',
       component: thankyou,
     },
+    {
+      path: '*',
+      redirect: '/',
+    },
   ],
   mode: 'history',
 });

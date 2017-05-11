@@ -3,7 +3,7 @@
     <div class="main-title">
       <div class="workme">
         <h2 id="thanks">
-          Thank you, message sent!
+          Sent!
         </h2>
       </div>
     </div>
