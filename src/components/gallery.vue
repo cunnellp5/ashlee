@@ -3,11 +3,12 @@
     <div class="workme">
       <h1>Gallery</h1>
       <!-- <h1 v-if="loadIt">Loading...</h1> -->
-      <ul>
-        <li>
-          <img class="" src="http://lorempixel.com/200/200/nature" alt="Nature">
-        </li>
-      </ul>
+      <div class="flexMe">
+        <div v-for="i in images">
+            <p> {{ i.description }} </p>
+            <img class="" :src="i.image_url" alt="Nature" height="200px" width="200px">
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -18,19 +19,22 @@ import axios from 'axios';
 export default {
   data() {
     return {
-      // loadIt: false,
+      images: [],
     };
   },
-  computed: {
-    mounted() {
+  methods: {
+    fetchData() {
       this.loadIt = true;
-      console.log(this.loadIt);
       axios.get('http://localhost:3000/pub/1/gallery')
-        .then((response) => {
-          console.log(response.data);
-          console.log('hi');
-        });
+      .then((response) => {
+        for (let i = 0; i < response.data.length; i += 1) {
+          this.images.push(response.data[i]);
+        }
+      });
     },
+  },
+  mounted() {
+    this.fetchData();
   },
 };
 </script>
@@ -42,5 +46,9 @@ h1 {
 .workme {
   height: 80vh;
   width: 90vw;
+}
+.flexMe {
+  display: flex;
+  justify-content: center;
 }
 </style>
