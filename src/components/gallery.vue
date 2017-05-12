@@ -1,6 +1,7 @@
 <template lang="html">
   <div class="">
-    <div class="workme">
+    <div class="loader" v-if="loadIt">Loading...</div>
+    <div class="workme" v-if="!loadIt">
       <h1>Gallery</h1>
       <!-- <h1 v-if="loadIt">Loading...</h1> -->
       <div class="flexMe">
@@ -20,6 +21,7 @@ export default {
   data() {
     return {
       images: [],
+      loadIt: false,
     };
   },
   methods: {
@@ -30,6 +32,9 @@ export default {
         for (let i = 0; i < response.data.length; i += 1) {
           this.images.push(response.data[i]);
         }
+      })
+      .then(() => {
+        this.loadIt = false;
       });
     },
   },
