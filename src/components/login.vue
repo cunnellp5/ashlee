@@ -4,9 +4,6 @@
     <v-card-text>
       <v-container fluid>
         <form role="form">
-          <!-- action="https://getsimpleform.com/messages?form_api_token=1166124d2acf44f12b596ae3be187626" method="post" -->
-          <!-- the redirect_to is optional, the form will redirect to the referrer on submission -->
-            <!-- <input type='hidden' name='redirect_to' value='http://localhost:8080/thankyou'/> -->
             <v-row row>
               <v-col xs4>
                 <v-subheader class="grey--text text--lighten-1">Email</v-subheader>
@@ -40,8 +37,8 @@
               </v-col>
             </v-row>
               <v-btn
-                v-on:click="admin"
-                @keyup.enter="admin"
+                v-on:click.native="edit"
+                @keyup.enter="edit"
                 flat dark class="btn--dark-flat-pressed grey darken-1">
                   Send
               </v-btn>
@@ -67,15 +64,14 @@ export default {
     };
   },
   methods: {
-    admin() {
+    edit() {
       if (this.admin.email !== '' && this.admin.password !== '') {
         this.loadIt = true;
         axios.post('http://localhost:3000/login', this.admin)
         .then((response) => {
+          localStorage.setItem('token', response.data);
+          // this.$router.replace({ name: 'edit' });
           console.log('hi');
-          // set token to window
-          this.admin = response.data;
-          console.log(response);
         }).catch((error) => {
           console.log(error.status);
         });

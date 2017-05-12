@@ -5,6 +5,7 @@ import gallery from '@/components/gallery';
 import Hello from '@/components/Hello';
 import thankyou from '@/components/thankyou';
 import login from '@/components/login';
+import edit from '@/components/edit';
 
 Vue.use(Router);
 
@@ -34,6 +35,11 @@ export default new Router({
       path: '/login',
       name: 'login',
       component: login,
+    },
+    {
+      path: '/edit',
+      name: 'edit',
+      component: edit,
     },
     {
       path: '*',

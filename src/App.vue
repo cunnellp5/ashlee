@@ -196,7 +196,7 @@ h3 {
 }
 #particles-js {
   /*background-image: url("./assets/ash.jpg");*/
-  background-image: url("http://lorempixel.com/g/1000/1000/");
+  background-image: url("http://lorempixel.com/g/1000/1000/nature");
   background-size: cover;
   position: absolute;
   top: 0;
