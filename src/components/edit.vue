@@ -10,10 +10,11 @@ export default {
   },
   methods: {
     checkToken() {
-      if (localStorage.token !== '') {
-        console.log('success');
+      if (localStorage.token) {
+        console.log('tokenSet');
       } else {
-        this.$router.replace({ name: '/' });
+        console.log('shouldnt be here');
+        this.$router.replace({ name: 'Hello' });
       }
     },
   },

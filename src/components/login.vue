@@ -3,7 +3,7 @@
   <v-card class="secondary elevation-0">
     <v-card-text>
       <v-container fluid>
-        <form role="form">
+        <form role="form" @keyup.enter="edit">
             <v-row row>
               <v-col xs4>
                 <v-subheader class="grey--text text--lighten-1">Email</v-subheader>
@@ -38,12 +38,10 @@
             </v-row>
               <v-btn
                 v-on:click.native="edit"
-                @keyup.enter="edit"
                 flat dark class="btn--dark-flat-pressed grey darken-1">
                   Send
               </v-btn>
         </form>
-
       </v-container>
     </v-card-text>
   </v-card>
@@ -70,7 +68,7 @@ export default {
         axios.post('http://localhost:3000/login', this.admin)
         .then((response) => {
           localStorage.setItem('token', response.data);
-          // this.$router.replace({ name: 'edit' });
+          this.$router.replace({ name: 'edit' });
           console.log('hi');
         }).catch((error) => {
           console.log(error.status);

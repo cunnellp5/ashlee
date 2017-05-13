@@ -5,7 +5,7 @@
   <v-card v-if="!loadIt" class="secondary elevation-0">
     <v-card-text>
       <v-container fluid>
-        <form role="form">
+        <form role="form" @keyup.enter="sendEmail">
           <!-- action="https://getsimpleform.com/messages?form_api_token=1166124d2acf44f12b596ae3be187626" method="post" -->
           <!-- the redirect_to is optional, the form will redirect to the referrer on submission -->
             <!-- <input type='hidden' name='redirect_to' value='http://localhost:8080/thankyou'/> -->
@@ -74,7 +74,6 @@
             </v-row>
               <v-btn
                 v-on:click.native="sendEmail"
-                @keyup.enter="sendEmail"
                 flat dark class="btn--dark-flat-pressed grey darken-1">
                   Send
               </v-btn>
