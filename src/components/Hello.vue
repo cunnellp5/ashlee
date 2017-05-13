@@ -22,6 +22,9 @@ export default {
       msg: 'Sm-Ashlee',
     };
   },
+  mounted() {
+    delete localStorage.token;
+  },
 };
 </script>
 

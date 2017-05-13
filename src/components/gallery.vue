@@ -39,6 +39,7 @@ export default {
     },
   },
   mounted() {
+    delete localStorage.token;
     this.fetchData();
   },
 };

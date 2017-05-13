@@ -12,6 +12,9 @@
 
 <script>
 export default {
+  mounted() {
+    delete localStorage.token;
+  },
 };
 </script>
 
