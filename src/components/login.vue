@@ -68,6 +68,9 @@ export default {
         axios.post('http://localhost:3000/login', this.admin)
         .then((response) => {
           localStorage.setItem('token', response.data);
+          const payload = localStorage.getItem('token').split('.')[1].replace('-', '+').replace('_', '/');
+          const user = JSON.parse(atob(payload));
+          console.log(user);
           this.$router.replace({ name: 'edit' });
           console.log('hi');
         }).catch((error) => {

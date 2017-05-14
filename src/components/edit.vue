@@ -1,11 +1,11 @@
 <template lang="html">
   <v-card>
     <v-toolbar class="secondary elevation-0">
-      Current Gallery Images
+      Current Gallery Images: ( Butt-hole 😎 )
     </v-toolbar>
 
     <v-list subheader>
-      <v-list-item v-for="item in images" v-bind:key="item.title">
+      <v-list-item v-for="item in images">
         <v-list-tile avatar>
           <v-list-tile-avatar>
             <img v-bind:src="item.image_url"/>
@@ -14,10 +14,9 @@
             <v-list-tile-title v-html="item.description" />
           </v-list-tile-content>
           <v-btn
-            v-bind="item.id"
+            v-bind:id="item.id"
             small
             error
-            icon
             v-on:click.native="del"
             flat dark class="btn--dark-flat-pressed grey darken-0">
               X
@@ -40,12 +39,9 @@ export default {
   },
   methods: {
     del() {
-      console.log('hi');
-      axios.delete(`http://localhost:3000/user/:id/gallery/${this.images.id}`)
-      .then((response) => {
-        console.log(response);
-        console.log(this.images.id);
-      });
+      console.log(this.item);
+      // axios.delete(`http://localhost:3000/user/:id/gallery/${this.item.id}`);
+      console.log('success');
     },
     fetchData() {
       this.loadIt = true;
