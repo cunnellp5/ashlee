@@ -3,7 +3,7 @@
   <v-card class="secondary elevation-0">
     <v-card-text>
       <v-container fluid>
-        <form role="form" @keyup.enter="edit">
+        <form role="form" @keyup.enter="login">
             <v-row row>
               <v-col xs4>
                 <v-subheader class="grey--text text--lighten-1">Email</v-subheader>
@@ -37,7 +37,7 @@
               </v-col>
             </v-row>
               <v-btn
-                v-on:click.native="edit"
+                v-on:click.native="login"
                 flat dark class="btn--dark-flat-pressed grey darken-1">
                   Send
               </v-btn>
@@ -62,7 +62,7 @@ export default {
     };
   },
   methods: {
-    edit() {
+    login() {
       if (this.admin.email !== '' && this.admin.password !== '') {
         this.loadIt = true;
         axios.post('http://localhost:3000/login', this.admin)

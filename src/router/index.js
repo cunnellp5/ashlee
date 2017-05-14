@@ -6,6 +6,7 @@ import Hello from '@/components/Hello';
 import thankyou from '@/components/thankyou';
 import login from '@/components/login';
 import edit from '@/components/edit';
+import add from '@/components/add';
 
 Vue.use(Router);
 
@@ -40,6 +41,11 @@ export default new Router({
       path: '/edit',
       name: 'edit',
       component: edit,
+    },
+    {
+      path: '/add',
+      name: 'add',
+      component: add,
     },
     {
       path: '*',
