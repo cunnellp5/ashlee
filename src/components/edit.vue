@@ -47,11 +47,11 @@ export default {
   },
   methods: {
     del(item) {
-      axios.delete(`http://localhost:3000/user/${item.user_id}/gallery/${item.id}`,
-        {
-          headers: { Authorization: 'Bearer token' },
-        })
-        .then(result => console.log(result))
+      const config = { Authorization: `Bearer ${localStorage.getItem('token')}` };
+      axios.delete(`http://localhost:3000/user/${item.user_id}/gallery/${item.id}`, { headers: config })
+        .then(result =>
+          console.log(result.data),
+          console.log(item))
         .catch(error => console.log(error));
     },
     fetchData() {
@@ -66,6 +66,9 @@ export default {
         this.loadIt = false;
       });
     },
+  },
+  beforeUpdate() {
+
   },
   mounted() {
     this.fetchData();

@@ -5,7 +5,7 @@
         Add an img and small description here:
       </v-toolbar>
 
-      <v-card class="grey lighten-4 elevation-0">
+      <v-card class="grey lighten-4 elevation-0" @keyup.enter="add">
         <v-card-text>
           <v-container fluid>
             <v-row row>
@@ -68,7 +68,8 @@ export default {
       const payload = localStorage.getItem('token').split('.')[1].replace('-', '+').replace('_', '/');
       const user = JSON.parse(atob(payload));
       if (this.gallery.image_url !== '' && this.gallery.description !== '') {
-        axios.post(`http://localhost:3000/user/${user.id}/gallery`, this.gallery)
+        const config = { Authorization: `Bearer ${localStorage.getItem('token')}` };
+        axios.post(`http://localhost:3000/user/${user.id}/gallery`, this.gallery, { headers: config })
         .catch((error) => {
           console.log(error.status);
         });
