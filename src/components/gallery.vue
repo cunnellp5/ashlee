@@ -26,7 +26,7 @@ export default {
   },
   methods: {
     fetchData() {
-      axios.get('http://localhost:3000/pub/1/gallery')
+      axios.get('/pub/1/gallery')
       .then((response) => {
         for (let i = 0; i < response.data.length; i += 1) {
           this.images.push(response.data[i]);

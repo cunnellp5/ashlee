@@ -69,7 +69,7 @@ export default {
       const user = JSON.parse(atob(payload));
       if (this.gallery.image_url !== '' && this.gallery.description !== '') {
         const config = { Authorization: `Bearer ${localStorage.getItem('token')}` };
-        axios.post(`http://localhost:3000/user/${user.id}/gallery`, this.gallery, { headers: config })
+        axios.post(`/user/${user.id}/gallery`, this.gallery, { headers: config })
         .catch((error) => {
           console.log(error.status);
         });

@@ -49,7 +49,7 @@ export default {
     del(item) {
       const config = { Authorization: `Bearer ${localStorage.getItem('token')}` };
       const index = this.images.indexOf(item);
-      axios.delete(`http://localhost:3000/user/${item.user_id}/gallery/${item.id}`, { headers: config })
+      axios.delete(`/user/${item.user_id}/gallery/${item.id}`, { headers: config })
         .then(result =>
           console.log(result.data),
           this.images.splice(index, 1),
@@ -58,7 +58,7 @@ export default {
     },
     fetchData() {
       this.loadIt = true;
-      axios.get('http://localhost:3000/pub/1/gallery')
+      axios.get('/pub/1/gallery')
       .then((response) => {
         for (let i = 0; i < response.data.length; i += 1) {
           this.images.push(response.data[i]);

@@ -65,7 +65,7 @@ export default {
     login() {
       if (this.admin.email !== '' && this.admin.password !== '') {
         this.loadIt = true;
-        axios.post('http://localhost:3000/login', this.admin)
+        axios.post('/login', this.admin)
         .then((response) => {
           localStorage.setItem('token', response.data);
           const payload = localStorage.getItem('token').split('.')[1].replace('-', '+').replace('_', '/');
