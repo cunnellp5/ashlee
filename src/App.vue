@@ -217,6 +217,7 @@ h3 {
   height: 100vh;
   justify-content: center;
   overflow: hidden;
+  overflow-y: scroll;
 }
 .main-section {
   max-width: 650px;
