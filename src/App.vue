@@ -151,12 +151,7 @@ h1, h2 {
   font-size: 10em;
   text-shadow: 8px 8px black;
 }
-h3 {
-  font-weight: 100;
-  font-size: 2rem;
-  color: white;
-  font-size: 5em;
-}
+
 #particles-js {
   /*background-image: url("./assets/ash.jpg");*/
   background-image: url("http://lorempixel.com/g/1000/1000/nature");

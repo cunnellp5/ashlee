@@ -1,7 +1,10 @@
 <template lang="html">
   <div>
-    <div class="workMe">
-
+    <br>
+    <br>
+    <br>
+    <br>
+  <div class="workMe">
   <div class="loader" v-if="loadIt">Loading...</div>
   <h3 v-if="!loadIt">Contact me</h3>
   <v-card v-if="!loadIt" class="secondary elevation-0">
