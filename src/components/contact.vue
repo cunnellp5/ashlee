@@ -1,5 +1,7 @@
 <template lang="html">
   <div>
+    <div class="workMe">
+
   <div class="loader" v-if="loadIt">Loading...</div>
   <h3 v-if="!loadIt">Contact me</h3>
   <v-card v-if="!loadIt" class="secondary elevation-0">
@@ -83,6 +85,7 @@
     </v-card-text>
   </v-card>
   </div>
+</div>
 </template>
 
 <script>
@@ -128,5 +131,9 @@ export default {
 <style lang="css" scoped>
   h3 {
     color: white;
+  }
+  .workme {
+    height: 80vh;
+    width: 90vw;
   }
 </style>
