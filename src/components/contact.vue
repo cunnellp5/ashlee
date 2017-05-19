@@ -119,6 +119,9 @@ export default {
   mounted() {
     delete localStorage.token;
   },
+  beforeDestroy() {
+    delete this.emailData;
+  },
 };
 </script>
 

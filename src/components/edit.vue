@@ -69,14 +69,14 @@ export default {
       });
     },
   },
-  beforeUpdate() {
-
-  },
   mounted() {
     this.fetchData();
     if (!localStorage.token) {
       this.$router.replace({ name: 'Hello' });
     }
+  },
+  beforeDestroy() {
+    delete this.images;
   },
 };
 </script>

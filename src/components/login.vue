@@ -76,6 +76,9 @@ export default {
         });
       }
     },
+    beforeDestroy() {
+      delete this.admin;
+    },
   },
 };
 </script>

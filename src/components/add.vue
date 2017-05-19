@@ -76,6 +76,9 @@ export default {
         this.$router.replace({ name: 'edit' });
       }
     },
+    beforeDestroy() {
+      delete this.gallery;
+    },
   },
 };
 </script>

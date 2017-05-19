@@ -42,6 +42,9 @@ export default {
     delete localStorage.token;
     this.fetchData();
   },
+  beforeDestroy() {
+    delete this.data;
+  },
 };
 </script>
 

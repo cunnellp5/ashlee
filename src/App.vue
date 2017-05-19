@@ -136,16 +136,6 @@ body {
   color: #2c3e50;
   background-color: #fff4f6;
 }
-code[class*="language-"],
-pre[class*="language-"],
-pre,
-code {
-  font-family: Menlo, Monaco, Andale Mono, Ubuntu Mono, monospace !important;
-  font-size: .95em;
-  @media (max-width: 767px) {
-    font-size: .85em;
-  }
-}
 pre.language-js, pre.language-html {
   max-width: 650px;
   margin: 1rem auto !important;
@@ -153,11 +143,7 @@ pre.language-js, pre.language-html {
   border-radius: 3px;
   box-shadow: 2px 6px 17px rgba(0, 0, 0, 0.39);
 }
-.npm-code {
-  background: #292929;
-  border-radius: 3px;
-  box-shadow: 2px 6px 17px rgba(0, 0, 0, 0.39);
-}
+
 h1, h2 {
   font-weight: normal;
   display: block;
@@ -165,34 +151,11 @@ h1, h2 {
   font-size: 10em;
   text-shadow: 8px 8px black;
 }
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
 h3 {
   font-weight: 100;
   font-size: 2rem;
   color: white;
   font-size: 5em;
-}
-.white {
-  color: #ffffff;
-}
-.teko {
-  font-family: 'Teko', sans-serif;
-}
-.text-left {
-  text-align: left;
-}
-.text-center {
-  text-align: center;
 }
 #particles-js {
   /*background-image: url("./assets/ash.jpg");*/
@@ -218,11 +181,6 @@ h3 {
   justify-content: center;
   overflow: hidden;
   overflow-y: scroll;
-}
-.main-section {
-  max-width: 650px;
-  margin: auto;
-  padding: 0 1rem;
 }
 .main-title {
   color: #fff;
