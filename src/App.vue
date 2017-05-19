@@ -36,7 +36,7 @@
         <br>
         <v-container fluid="fluid">
           <v-row>
-            <v-col sm12>
+            <v-col xs12 sm12>
               <v-card class="secondary red lighten-3">
                 <v-card-text>
                   <h3>Actress | Boss</h3>
@@ -48,14 +48,14 @@
         <br>
         <v-container fluid="fluid">
           <v-row>
-            <v-col sm12 md6>
+            <v-col xs12 sm12 md6>
               <v-card class="secondary red lighten-4">
                 <v-card-text>
                   <v-parallax height="500" src="http://lorempixel.com/300/800/nature"></v-parallax>
                 </v-card-text>
               </v-card>
             </v-col>
-            <v-col class="text" sm12 md6>
+            <v-col class="text" xs12 sm12 md6>
               <v-card class="secondary red lighten-3">
                 <v-card-text>
                   <h3>About:</h3>
@@ -68,7 +68,7 @@
         <br>
         <v-container fluid="fluid">
           <v-row>
-            <v-col class="text" sm12 md6>
+            <v-col class="text" xs12 sm12 md6>
               <v-card class="secondary red lighten-3">
                 <v-card-text>
                   <h3>Interests:</h3>
@@ -76,7 +76,7 @@
                 </v-card-text>
               </v-card>
             </v-col>
-            <v-col sm12 md6>
+            <v-col xs12 sm12 md6>
               <v-card class="secondary red lighten-4">
                 <v-card-text>
                   <v-parallax height="500" src="http://lorempixel.com/300/700/nature"></v-parallax>
@@ -218,4 +218,5 @@ h3 {
     transform: translateX(10px);
     opacity: 0;
   }
+
 </style>
