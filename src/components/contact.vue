@@ -1,9 +1,5 @@
 <template lang="html">
   <div>
-    <br>
-    <br>
-    <br>
-    <br>
   <div class="workMe">
   <div class="loader" v-if="loadIt">Loading...</div>
   <h3 v-if="!loadIt">Contact me</h3>

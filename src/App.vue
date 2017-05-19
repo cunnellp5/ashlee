@@ -178,6 +178,7 @@ h1, h2 {
   overflow-y: scroll;
 }
 .main-title {
+  margin-top: 5em;
   color: #fff;
   z-index: 999;
   h2 {
