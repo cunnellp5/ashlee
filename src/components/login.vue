@@ -1,6 +1,7 @@
 <template lang="html">
   <div>
-  <v-card class="secondary elevation-0">
+  <div class="loader" v-if="loadIt">Loading...</div>
+  <v-card class="secondary elevation-0" v-if="!loadIt">
     <v-card-text>
       <v-container fluid>
         <form role="form" @keyup.enter="login">
@@ -50,6 +51,7 @@
 
 <script>
 import axios from 'axios';
+import '../../globalstyle.css';
 
 export default {
   data() {
@@ -79,4 +81,5 @@ export default {
 </script>
 
 <style lang="css">
+
 </style>
