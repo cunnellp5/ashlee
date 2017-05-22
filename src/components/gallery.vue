@@ -1,7 +1,7 @@
 <template lang="html">
   <div class="">
     <div class="loader" v-if="loadIt">Loading...</div>
-    <div class="workme" v-if="!loadIt">
+    <div class="" v-if="!loadIt">
       <h1>Gallery</h1>
       <!-- <h1 v-if="loadIt">Loading...</h1> -->
       <div class="flexMe">
@@ -51,10 +51,6 @@ export default {
 <style lang="css" scoped>
 h1 {
   color: white;
-}
-.workme {
-  height: 80vh;
-  width: 90vw;
 }
 .flexMe {
   display: flex;

@@ -70,9 +70,15 @@ export default {
         axios.post('/login', this.admin)
         .then((response) => {
           localStorage.setItem('token', response.data);
-          this.$router.replace({ name: 'edit' });
-        }).catch((error) => {
-          console.log(error.status);
+          const payload = localStorage.getItem('token').split('.')[1].replace('-', '+').replace('_', '/');
+          const user = JSON.parse(atob(payload));
+          if (user.email === this.admin.email) {
+            this.$router.replace({ name: 'edit' });
+          } else {
+            this.$router.replace({ name: 'gallery' });
+          }
+        }).catch(() => {
+          this.$router.replace({ name: 'gallery' });
         });
       }
     },

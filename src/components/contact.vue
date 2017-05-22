@@ -111,9 +111,8 @@ export default {
         .then((response) => {
           this.emailData = response.data;
           event.preventDefault();
-        }).catch((error) => {
+        }).catch(() => {
           this.$router.replace({ name: 'thankyou' });
-          console.log(error.status);
         });
       }
     },

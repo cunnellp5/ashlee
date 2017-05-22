@@ -50,11 +50,9 @@ export default {
       const config = { Authorization: `Bearer ${localStorage.getItem('token')}` };
       const index = this.images.indexOf(item);
       axios.delete(`/user/${item.user_id}/gallery/${item.id}`, { headers: config })
-        .then(result =>
-          console.log(result.data),
-          this.images.splice(index, 1),
-          console.log(item))
-        .catch(error => console.log(error));
+        .then(() => {
+          this.images.splice(index, 1);
+        });
     },
     fetchData() {
       this.loadIt = true;
