@@ -39,7 +39,7 @@
             <v-col xs12 sm12>
               <v-card class="secondary red lighten-3">
                 <v-card-text>
-                  <h3>Actress | Boss</h3>
+                  <h3>Actress</h3>
                 </v-card-text>
               </v-card>
             </v-col>
@@ -118,7 +118,7 @@ export default {
 }
 *, :after, :before {
   box-sizing: border-box;
-  font-family: 'Permanent Marker', cursive;
+  font-family: 'Anton', sans-serif;
 }
 html, body {
   height: 100%;

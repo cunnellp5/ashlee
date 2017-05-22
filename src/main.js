@@ -13,8 +13,8 @@ Vue.use(VueParticles);
 Vue.use(axios);
 
 Vue.config.productionTip = false;
-axios.defaults.baseURL = 'http://localhost:3000/';
-// axios.defaults.baseURL = 'https://ashleemac.herokuapp.com/';
+// axios.defaults.baseURL = 'http://localhost:3000/';
+axios.defaults.baseURL = 'https://ashleemac.herokuapp.com/';
 
 /* eslint-disable no-new */
 new Vue({
