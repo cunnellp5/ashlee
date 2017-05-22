@@ -39,7 +39,7 @@
             <v-col xs12 sm12>
               <v-card class="secondary red lighten-3">
                 <v-card-text>
-                  <h3>Actress</h3>
+                  <h3 class="act">Actress</h3>
                 </v-card-text>
               </v-card>
             </v-col>
@@ -95,6 +95,9 @@ export default {
 </script>
 
 <style scoped>
+.act {
+  margin-bottom: 0;
+}
 .text {
   display: flex;
   justify-content: center;

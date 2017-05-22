@@ -4,26 +4,27 @@
       <v-toolbar class="secondary elevation-0">
         Current Gallery Images: ( Butt-hole 😎 )
       </v-toolbar>
-
-      <v-list subheader>
-        <v-list-item v-for="item in images">
-          <v-list-tile avatar>
-            <v-list-tile-avatar>
-              <img v-bind:src="item.image_url"/>
-            </v-list-tile-avatar>
-            <v-list-tile-content>
-              <v-list-tile-title v-html="item.description" />
-            </v-list-tile-content>
-            <v-btn
-              small
-              error
-              v-on:click.native="del(item)"
-              flat dark class="btn--dark-flat-pressed grey darken-0">
-                X
-            </v-btn>
-          </v-list-tile>
-        </v-list-item>
-      </v-list>
+          <v-list subheader>
+            <draggable v-model="images">
+            <v-list-item v-for="item in images">
+              <v-list-tile avatar>
+                <v-list-tile-avatar>
+                  <img v-bind:src="item.image_url"/>
+                </v-list-tile-avatar>
+                <v-list-tile-content>
+                  <v-list-tile-title v-html="item.description" />
+                </v-list-tile-content>
+                <v-btn
+                  small
+                  error
+                  v-on:click.native="del(item)"
+                  flat dark class="btn--dark-flat-pressed grey darken-0">
+                    X
+                </v-btn>
+              </v-list-tile>
+            </v-list-item>
+          </draggable>
+          </v-list>
       <v-divider />
     </v-card>
     <v-btn
@@ -37,9 +38,13 @@
 </template>
 
 <script>
+import draggable from 'vuedraggable';
 import axios from 'axios';
 
 export default {
+  components: {
+    draggable,
+  },
   data() {
     return {
       images: [],

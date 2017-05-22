@@ -5,20 +5,26 @@
       <h1>Gallery</h1>
       <!-- <h1 v-if="loadIt">Loading...</h1> -->
       <div class="flexMe">
-        <div v-for="i in images">
-            <p> {{ i.description }} </p>
-            <img class="" :src="i.image_url" alt="Nature" height="200px" width="200px">
-        </div>
+        <draggable  class="flexMe" v-model="images">
+          <div v-for="i in images">
+              <p> {{ i.description }} </p>
+              <img class="" :src="i.image_url" alt="Nature" height="200px" width="200px">
+          </div>
+        </draggable>
       </div>
     </div>
   </div>
 </template>
 
 <script>
+import draggable from 'vuedraggable';
 import axios from 'axios';
 import '../../globalstyle.css';
 
 export default {
+  components: {
+    draggable,
+  },
   data() {
     return {
       images: [],
@@ -56,5 +62,11 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin: auto auto;
+}
+@media (max-width: 629px) {
+  h1 {
+    margin-top: 3em;
+  }
 }
 </style>

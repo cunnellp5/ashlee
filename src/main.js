@@ -5,16 +5,18 @@ import Vuetify from 'vuetify';
 import VueParticles from 'vue-particles';
 import 'vuetify/dist/vuetify.min.css';
 import axios from 'axios';
+import vuedraggable from 'vuedraggable';
 import App from './App';
 import router from './router';
 
 Vue.use(Vuetify);
 Vue.use(VueParticles);
 Vue.use(axios);
+Vue.use(vuedraggable);
 
 Vue.config.productionTip = false;
-// axios.defaults.baseURL = 'http://localhost:3000/';
-axios.defaults.baseURL = 'https://ashleemac.herokuapp.com/';
+axios.defaults.baseURL = 'http://localhost:3000/';
+// axios.defaults.baseURL = 'https://ashleemac.herokuapp.com/';
 
 /* eslint-disable no-new */
 new Vue({
